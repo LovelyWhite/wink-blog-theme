@@ -55,6 +55,7 @@
         <?php if($this->options->searchPage): ?>
         <a href="<?php $this->options->searchPage(); ?>" class="navbar-search">
             <span class="icon-search"></span>
+            <form></form>
         </a>
         <?php else: ?>
         <div class="navbar-search" onclick="">
@@ -66,15 +67,13 @@
             </form>
         </div>
         <?php endif;?>
-        <div class="navbar-mobile-menu" onclick="">
+        <div onclick="" class="navbar-mobile-menu">
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>
                 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                 <?php while($pages->next()): ?>
-
                 <li><a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
-
             </ul>
         </div>
     </div>
