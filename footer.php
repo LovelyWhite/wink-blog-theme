@@ -57,7 +57,7 @@
 </footer>
 
 <?php if (($this->options->tableOfContents == 'able') && ($this->is('post'))): ?>
-<div id="directory-content" class="directory-content">
+<div id="directory-content" class="directory-content" style="z-index:99">
     <div id="directory"></div>
 </div>
 <script>
