@@ -79,11 +79,12 @@
 <div id="post-bottom-bar" class="post-bottom-bar">
 	<div class="bottom-bar-inner">
 		<div class="bottom-bar-items social-share left">
-			<span class="bottom-bar-item">Share : </span>
-			<span class="bottom-bar-item bottom-bar-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($this->permalink()); ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">facebook</a></span>
+			<span style="font-size:13px;color:#C0C4CC">🐶 A dog here</span>
+			<!-- <span class="bottom-bar-item">分享: </span>
+			<span class="bottom-bar-item bottom-bar-facebook"><a href="https://connect.qq.com/widget/shareqq/index.html?url=<?php echo urlencode($this->permalink()); ?>&title=<?php $this->title() ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">QQ</a></span>
 			<span class="bottom-bar-item bottom-bar-twitter"><a href="https://twitter.com/intent/tweet?url=<?php echo urlencode($this->permalink()); ?>&text=<?php echo urlencode($this->title()); ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">Twitter</a></span>
 			<span class="bottom-bar-item bottom-bar-weibo"><a href="http://service.weibo.com/share/share.php?url=<?php echo urlencode($this->permalink()); ?>&amp;title=<?php echo urlencode($this->title()); ?>" target="_blank" title="<?php $this->title() ?>" rel="nofollow">Weibo</a></span>
-			<span class="bottom-bar-item bottom-bar-qrcode"><a href="//pan.baidu.com/share/qrcode?w=300&amp;h=300&amp;url=<?php echo urlencode($this->permalink()); ?>" target="_blank" rel="nofollow">QRcode</a></span>
+			<span class="bottom-bar-item bottom-bar-qrcode"><a href="https://api.caoliao.net/api/qrcode/code?text=<?php echo urlencode($this->permalink()); ?>" target="_blank" rel="nofollow">QRcode</a></span> -->
 		</div>
 		<div class="bottom-bar-items right">
 			<span class="bottom-bar-item"><?php theNext($this); ?></span>
