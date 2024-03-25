@@ -10,7 +10,7 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发表于 <?php $this->date('Y/m/d H:i'); ?></time>  分类 - <?php $this->category(''); ?> 共有 <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -29,7 +29,7 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发表于 <?php $this->date('Y/m/d H:i'); ?></time>  分类 - <?php $this->category(''); ?> 共有 <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -46,7 +46,7 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发表于 <?php $this->date('Y/m/d H:i'); ?></time>  分类 - <?php $this->category(''); ?> 共有 <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -62,7 +62,7 @@
 			<?php $this->title() ?>
 		</h1>
 		<div class="post-data">
-			<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+			<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发表于 <?php $this->date('Y/m/d H:i'); ?></time>  分类 - <?php $this->category(''); ?> 共有 <a href="#comments"><?php $this->commentsNum(_t(' 0 条评论'), _t(' 1 条评论'), _t(' %d 条评论')); ?></a>
 		</div>
 	</div>
 	<div id="post-content" class="post-content" itemprop="articleBody">
@@ -71,7 +71,7 @@
         </p>
 		<?php parseContent($this); ?>
 		<p class="post-info">
-			本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为: <?php echo date('M j, Y \\a\t h:i a' , $this->modified); ?>
+			本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为: <?php echo date('Y/m/d H:i' , $this->modified); ?>
 		</p>
 	</div>
 </article>

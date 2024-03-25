@@ -5,11 +5,11 @@
     <div class="common-item">
         <div class="common-title">
             <?php $this->archiveTitle(array(
-		        'category'  =>  _t('Category : %s'),
-		        'search'    =>  _t('Search : %s'),
-		        'tag'       =>  _t('Tag : %s'),
-		        'author'    =>  _t('Author : %s'),
-		        'date'      =>  _t('Date : %s')
+		        'category'  =>  _t('分类 : %s'),
+		        'search'    =>  _t('搜索 : %s'),
+		        'tag'       =>  _t('标签 : %s'),
+		        'author'    =>  _t('作者 : %s'),
+		        'date'      =>  _t('日期 : %s')
 		    ), '', ''); ?>
         </div>
         <div class="post-lists">
@@ -44,7 +44,7 @@
 								<?php else : ?>
 								 <div class="item-meta-ico bg-ico-<?php echo randBgIco(); ?>" style="background: url(<?php $this->options->themeUrl('images/bg-ico.png'); ?>) no-repeat;background-size: 40px auto;"></div>
 	                            <?php endif; ?>
-								<div class="item-meta-date"> <?php $this->date('M j, Y'); ?> </div>
+								<div class="item-meta-date"> <?php $this->date('Y/m/d H:i'); ?> </div>
 							</div>
 						</div>
 					</div>

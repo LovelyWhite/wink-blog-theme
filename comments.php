@@ -54,8 +54,8 @@ $comments->alt(' comment-odd', ' comment-even');
                 <span class="comment-author-at"><?php getCommentAt($comments->coid); ?></span> <?php $comments->content(); ?></p>
             </div>
             <div class="comment-meta">
-                <time class="comment-time"><?php $comments->date('M j, Y'); ?></time>
-                <span class="comment-reply"><?php $comments->reply('Reply'); ?></span>
+                <time class="comment-time"><?php $comments->date('Y/m/d H:i'); ?></time>
+                <span class="comment-reply"><?php $comments->reply('回复'); ?></span>
             </div>
         </div>
     </div>
@@ -71,17 +71,17 @@ $comments->alt(' comment-odd', ' comment-even');
     <div id="comments" class="clearfix">
         <?php $this->comments()->to($comments); ?>
         <?php if($this->allow('comment')): ?>
-        <span class="response">Responses<?php if($this->user->hasLogin()): ?> / You are <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a> here, do you want to <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>logout</a> ?<?php endif; ?> <?php $comments->cancelReply(' / Cancel Reply'); ?></span>
+        <span class="response">文章评论<?php if($this->user->hasLogin()): ?> / 当前登陆为 <a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a>，是否 <a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>登出</a> ?<?php endif; ?> <?php $comments->cancelReply(' / 取消回复'); ?></span>
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form" onsubmit ="getElementById('misubmit').disabled=true;return true;">
             <?php if(!$this->user->hasLogin()): ?>
-            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix" placeholder="Name (*)" value="" required>
-            <input type="email" name="mail" id="mail" class="form-control input-control clearfix" placeholder="Email (*)" value="" <?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
-            <input type="url" name="url" id="url" class="form-control input-control clearfix" placeholder="Site (http://)" value="" <?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?>>
+            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix" placeholder="昵称 (*)" value="" required>
+            <input type="email" name="mail" id="mail" class="form-control input-control clearfix" placeholder="邮箱 (*)" value="" <?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
+            <input type="url" name="url" id="url" class="form-control input-control clearfix" placeholder="回访网址 (http://)" value="" <?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?>>
             <?php endif; ?>
 
-            <textarea name="text" id="textarea" class="form-control" placeholder="Your comment here. Be cool. " required ><?php $this->remember('text',false); ?></textarea>
+            <textarea name="text" id="textarea" class="form-control" placeholder="速速给这篇文章发表你的见解..." required ><?php $this->remember('text',false); ?></textarea>
 
-            <button type="submit" class="submit" id="misubmit">SUBMIT</button>
+            <button type="submit" class="submit" id="misubmit">提交</button>
             <?php $security = $this->widget('Widget_Security'); ?>
             <input type="hidden" name="_" value="<?php echo $security->getToken($this->request->getReferer())?>">
         </form>

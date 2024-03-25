@@ -12,7 +12,7 @@ $this->need('header.php');
     <div class="search-page">
         <form id="search" class="search-form" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
             <span class="search-box clearfix">
-                <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off">
+                <input type="text" id="input" class="input" name="s" required="true" placeholder="输入你想要搜索的内容吧..." maxlength="30" autocomplete="off">
                 <button type="submit" class="spsubmit"><i class="icon-search"></i></button>
             </span>
         </form>

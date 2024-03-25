@@ -40,11 +40,11 @@
 				</div>
 			</div>
 			<div class="meta-item meta-posts">
-				<h3 class="meta-title">RECENT POSTS</h3>
+				<h3 class="meta-title">最新发布</h3>
                 <?php getRecentPosts($this,8); ?>
 			</div>
             <div class="meta-item meta-comments">
-                <h3 class="meta-title">RECENT COMMENTS</h3>
+                <h3 class="meta-title">最新评论</h3>
                 <?php $this->widget('Widget_Comments_Recent','pageSize=8')->to($comments); ?>
                 <?php while($comments->next()): ?>
                 <li><a href="<?php $comments->permalink(); ?>"><?php $comments->author(false); ?> : <?php $comments->excerpt(25, '...'); ?></a></li>
@@ -229,7 +229,7 @@ addCommentInputValue();
 <?php $this->footer(); ?>
 <script src="//cdn.bootcss.com/headroom/0.9.1/headroom.min.js"></script>
 <?php if ($this->options->useHighline == 'able'): ?>
-<script src="//cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <?php endif; ?>
 <?php if ($this->options->pjaxSet == 'able'): ?>
 <script src="<?php $this->options->themeUrl('js/instantclick.min.js?v20140319'); ?>"></script>

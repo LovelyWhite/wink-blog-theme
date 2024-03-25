@@ -23,7 +23,7 @@
     ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <meta name="keywords" content="<?php $this->keywords(); ?>" />
     <?php $this->header('keywords=&generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&rss1=&rss2=&atom='); ?>
-    <link href="//cdn.bootcss.com/highlight.js/9.10.0/styles/xcode.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <link href="<?php $this->options->themeUrl('style.min.css?20170331'); ?>" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
@@ -55,14 +55,13 @@
         <?php if($this->options->searchPage): ?>
         <a href="<?php $this->options->searchPage(); ?>" class="navbar-search">
             <span class="icon-search"></span>
-            <form></form>
         </a>
         <?php else: ?>
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <span class="search-box">
-                    <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off">
+                    <input type="text" id="input" class="input" name="s" required="true" placeholder="输入你想要搜索的内容吧..." maxlength="30" autocomplete="off">
                 </span>
             </form>
         </div>
