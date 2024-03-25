@@ -230,6 +230,7 @@ addCommentInputValue();
 <script src="//cdn.bootcss.com/headroom/0.9.1/headroom.min.js"></script>
 <?php if ($this->options->useHighline == 'able'): ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 <?php endif; ?>
 <?php if ($this->options->pjaxSet == 'able'): ?>
 <script src="<?php $this->options->themeUrl('js/instantclick.min.js?v20140319'); ?>"></script>
@@ -275,7 +276,6 @@ var header = new Headroom(document.getElementById("header"), {
 });
 header.init();
 <?php if (($this->options->pjaxSet == 'disable') && ($this->options->useHighline == 'able') && ($this->is('post'))): ?>
-hljs.initHighlightingOnLoad();
 <?php endif; ?>
 <?php if ($this->options->fastClickSet == 'able'): ?>
 if ('addEventListener' in document) {
@@ -315,13 +315,6 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 <?php if ($this->options->pjaxSet == 'able'): ?>
 <script data-no-instant>
 InstantClick.on('change', function(isInitialLoad){
-    <?php if ($this->options->useHighline == 'able'): ?>
-    var blocks = document.querySelectorAll('pre code');
-    for (var i = 0; i < blocks.length; i++) {
-        hljs.highlightBlock(blocks[i]);
-    }
-    <?php endif; ?>
-
     if (isInitialLoad === false) {
     <?php if($this->options->GoogleAnalytics): ?>
         if (typeof ga !== 'undefined') ga('send', 'pageview', location.pathname + location.search);
