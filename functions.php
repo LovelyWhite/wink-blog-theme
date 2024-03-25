@@ -94,6 +94,12 @@ function themeConfig($form) {
     $GoogleAnalytics = new Typecho_Widget_Helper_Form_Element_Textarea('GoogleAnalytics', NULL, NULL, _t('Google Analytics代码'), _t('填写你从Google Analytics获取到的Universal Analytics跟踪代码，不需要script标签'));
     $form->addInput($GoogleAnalytics);
 
+    $useSocial = new Typecho_Widget_Helper_Form_Element_Radio('useSocial',
+    array('able' => _t('启用'),
+        'disable' => _t('禁止'),
+    ),
+    'disable', _t('Social 展示'), _t('默认禁止，启用会将下面的 Social 展示在页面中'));
+    $form->addInput($useSocial);
 
     $socialweibo = new Typecho_Widget_Helper_Form_Element_Text('socialweibo', NULL, NULL, _t('输入微博链接'), _t('在这里输入微博链接,支持 http:// 或 https:// 或 //'));
     $form->addInput($socialweibo->addRule('xssCheck', _t('请不要在链接中使用特殊字符')));
