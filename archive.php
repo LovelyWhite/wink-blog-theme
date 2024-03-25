@@ -51,7 +51,7 @@
 				</div>
 				<?php endwhile; ?>
 				<?php else: ?>
-                <div class="post-list-item"><?php _e('没有找到内容,请换别的关键字进行检索'); ?></div>
+                <div class="post-list-item"><?php _e('没有任何内容！'); ?></div>
 		        <?php endif; ?>
 			</div>
 		</div>
